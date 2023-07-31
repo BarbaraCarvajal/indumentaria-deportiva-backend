@@ -1,9 +1,15 @@
 const express = require('express');
 const runDB = require('./db');
-const Producto = require('./models/producto');
+//const Producto = require('./models/producto');
 const productoRouter = require('./router/ProductoRouter');
+const cors = require('cors');
 
 const app = express();
+
+app.use(cors({
+    credentials: true,
+    origin: 'http://localhost:5173'
+}));
 
 const bodyParser = require('body-parser');
 
