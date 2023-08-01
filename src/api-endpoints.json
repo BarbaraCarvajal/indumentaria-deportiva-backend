@@ -1,0 +1,17 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API INDUMENTARIA DEPORTIVA",
+        "description": "API",
+        "version": "0.0.1"
+    }, 
+    "paths":{
+        "/api/productos":{
+            "get":{
+                
+            }
+        }
+    }
+
+
+}
