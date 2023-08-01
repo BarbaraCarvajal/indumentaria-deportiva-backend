@@ -3,13 +3,11 @@ const runDB = require('./db');//función runDB para conectar a la base de datos
 const productoRouter = require('./router/ProductoRouter');// enrutador de Producto
 const cors = require('cors'); // librería CORS para permitir peticiones cruzadas (Cross-Origin Resource Sharing)
 //const swaggerUi = require('swagger-ui-express'); // librería swagger-ui-express para documentar la API
-//const usuarioRouter = require('./router/usuarioRouter');
-
+const usuarioRouter = require('./router/usuarioRouter');
+const authRouter = require('./router/authRouter');
 
 // Crear una instancia de la aplicación Express
 const app = express();
-
-
 
 // Configurar CORS para permitir peticiones desde http://localhost:5173
 app.use(cors({
@@ -31,6 +29,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // Asociar las rutas definidas en el enrutador de Producto a la ruta "/api"
 app.use("/api", productoRouter);
+app.use("/api", usuarioRouter);
+app.use('/auth', authRouter);
 
 // Iniciar el servidor Express en el puerto 3100 y mostrar un mensaje en la consola
 app.listen(3100, () => {

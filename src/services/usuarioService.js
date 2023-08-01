@@ -1,21 +1,27 @@
 const mongoose = require('mongoose');
 const Usuario = require('../models/usuario');
+const bcrypt = require('bcrypt');
+const { createToken } = require('../middlewares/auth');
 
 //funcion para crear usuarios
 
 const createUsuario = async (req, res) => {
-    const usuario = new Usuario({
-        _id: new mongoose.Types.ObjectId(),
-        nombre: req.body.nombre,
-        apellido: req.body.apellido,
-        email: req.body.email,
-        password: req.body.password,
-        rol: req.body.rol,
-    });
+    const {nombre, apellido, email, password, rol} = req.body;
     try{
+        const hashedPassword = await bcrypt.hash(password, 10);
+
+        const usuario = new Usuario({
+            _id: new mongoose.Types.ObjectId(),
+            nombre,
+            apellido,
+            email,
+            password: hashedPassword,
+            rol,
+        });
         const usuarioNuevo = await usuario.save();
         console.log('usuario nuevo guardado:', usuarioNuevo);
-        return usuarioNuevo;
+        const token = createToken(usuarioNuevo);
+        return { userSaved: usuarioNuevo, token};
     }catch(error){
         console.log('error al guardar el usuario:', error);
         throw new Error(error);
