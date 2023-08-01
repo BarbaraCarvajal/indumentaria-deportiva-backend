@@ -2,7 +2,7 @@ const express = require('express');// librería Express
 const runDB = require('./db');//función runDB para conectar a la base de datos
 const productoRouter = require('./router/ProductoRouter');// enrutador de Producto
 const cors = require('cors'); // librería CORS para permitir peticiones cruzadas (Cross-Origin Resource Sharing)
-
+const swaggerUi = require('swagger-ui-express'); // librería swagger-ui-express para documentar la API
 
 // Crear una instancia de la aplicación Express
 const app = express();
@@ -18,6 +18,8 @@ const bodyParser = require('body-parser');
 
 // Conectar a la base de datos llamando a la función runDB
 runDB();
+
+//app.use("/api-docs",swaggerUi.serve,swaggerUi.setup(require("./swagger.json")));
 
 // Configurar Express para parsear datos de solicitud como JSON
 app.use(bodyParser.json());
