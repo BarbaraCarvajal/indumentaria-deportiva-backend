@@ -57,10 +57,10 @@ const idSchema = Joi.string().length(24).hex().required();
 
 // Middleware para verificar que se ingrese un ID válido en la URL
 const comprobarId = (req, res, next) => {
-    const eventoID = req.params.id;
+    const productId = req.params.id;
 
     // Validar que el ID cumpla con el esquema definido
-    const { error } = idSchema.validate(eventoID);
+    const { error } = idSchema.validate(productId);
 
     // Si hay un error de validación, se envía una respuesta de error con un mensaje personalizado
     if (error) {
