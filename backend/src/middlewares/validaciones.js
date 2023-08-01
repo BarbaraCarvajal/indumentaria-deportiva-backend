@@ -1,7 +1,10 @@
+// Importar Joi para validación de esquemas
 const Joi = require('joi');
 
+// Definir el esquema de validación para los datos del producto
 const productoEsquema = Joi.object({
     title: Joi.string().min(3).max(100).required().messages({
+        // Mensajes de error personalizados para cada validación
         'string.base': 'El título debe ser una cadena de texto',
         'string.empty': 'El título no debe estar vacío',
         'string.min': 'El título debe tener al menos 3 caracteres',
@@ -35,10 +38,13 @@ const productoEsquema = Joi.object({
     }),
 });
 
+// Middleware de validación para los datos del producto
 const productoValidacion = (req, res, next) => {
     let payload = req.body;
+    // Validar los datos del producto con el esquema definido
     let validacionDeProducto = productoEsquema.validate(payload, { abortEarly: false });
 
+    // Si hay errores de validación, se envía una respuesta de error con los mensajes detallados
     if (validacionDeProducto.error) {
         const errores = validacionDeProducto.error.details.map((detalle) => {
             return {
@@ -49,10 +55,11 @@ const productoValidacion = (req, res, next) => {
         return res.status(400).json({ errores });
     }
 
+    // Si los datos son válidos, pasar al siguiente middleware
     next();
 };
 
-// Esquema de validación para el ID del evento
+// Definir el esquema de validación para el ID del producto
 const idSchema = Joi.string().length(24).hex().required();
 
 // Middleware para verificar que se ingrese un ID válido en la URL
@@ -70,5 +77,5 @@ const comprobarId = (req, res, next) => {
     next();
 };
 
-
+// Exportar los middlewares para su uso en otros archivos
 module.exports = { productoValidacion, comprobarId };
