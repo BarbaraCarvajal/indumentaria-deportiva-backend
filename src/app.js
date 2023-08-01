@@ -2,6 +2,7 @@ const express = require('express');
 const runDB = require('./db');
 //const Producto = require('./models/producto');
 const productoRouter = require('./router/ProductoRouter');
+const usuarioRouter = require('./router/usuarioRouter');
 const cors = require('cors');
 
 const app = express();
@@ -22,7 +23,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 
 //asociar las rutas
-app.use("/api", productoRouter)
+app.use("/api", productoRouter);
+app.use('usuarios', usuarioRouter);
  
 
 
