@@ -2,8 +2,8 @@ const express = require('express');// librería Express
 const runDB = require('./db');//función runDB para conectar a la base de datos
 const productoRouter = require('./router/ProductoRouter');// enrutador de Producto
 const cors = require('cors'); // librería CORS para permitir peticiones cruzadas (Cross-Origin Resource Sharing)
-const swaggerUi = require('swagger-ui-express'); // librería swagger-ui-express para documentar la API
-const usuarioRouter = require('./router/usuarioRouter');
+//const swaggerUi = require('swagger-ui-express'); // librería swagger-ui-express para documentar la API
+//const usuarioRouter = require('./router/usuarioRouter');
 
 
 // Crear una instancia de la aplicación Express
