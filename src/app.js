@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 //asociar las rutas
 app.use("/api", productoRouter);
-app.use('usuarios', usuarioRouter);
+app.use('/api', usuarioRouter);
  
 
 
