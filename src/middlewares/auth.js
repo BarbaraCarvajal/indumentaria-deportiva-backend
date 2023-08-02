@@ -40,9 +40,11 @@ const login = async (req, res) => {
 
 //middleware para verificar el token 
 const verifyToken = (req, res, next) => {
+    console.log('req.cookies:', req.cookies);
     const token = req.cookies.token;
-    console.log(req.cookies);
+    console.log( 'cokies verify',token);
     if (!token) {
+        console.log('No hay token');
         res.redirect('/login');
     }
     try {

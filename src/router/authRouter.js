@@ -4,6 +4,6 @@ const usuarioController = require('../controllers/usuario.controller');
 const auth = require('../middlewares/auth');
 
 router.post('/login', usuarioController.loginUser);
-router.get('/logout', auth.verifyToken, usuarioController.logoutUser);
+router.post('/logout', auth.verifyToken, usuarioController.logoutUser);
 
 module.exports = router;

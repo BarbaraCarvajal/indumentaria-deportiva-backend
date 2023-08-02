@@ -17,7 +17,7 @@ const loginUser = async (req, res) => {
 //funcion para cerrar sesion
 const logoutUser = async (req, res) => {
     try{
-        res.clearCookie('token'), {httpOnly: true, secure: true};
+        res.clearCookie('token', {httpOnly: true, secure: true});
         res.status(200).json({message: 'Sesión cerrada'});
     }catch(error){
         console.log('Error al cerrar sesión', error)
