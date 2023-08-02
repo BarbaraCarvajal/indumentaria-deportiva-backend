@@ -1,17 +1,241 @@
 {
     "openapi": "3.0.0",
     "info": {
-        "title": "API INDUMENTARIA DEPORTIVA",
+        "title": "API INDUMENTARIA DEPORTIVA ⚽️🏀⛹🏻‍♀️",
         "description": "API",
         "version": "0.0.1"
-    }, 
-    "paths":{
-        "/api/productos":{
-            "get":{
-                
+    },
+    "paths": {
+        "/api/productos": {
+            "get": {
+                "summary": "Listado de productos",
+                "responses": {
+                    "200": {
+                        "description": "Se obtuvieron los productos correctamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/Producto"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "No se obtuvieron los eventos correctamente"
+                    },
+                    "500": {
+                        "description": "Error en el servidor"
+                    },
+                    "404": {
+                        "description": "No se encontro el producto"
+                    }
+                }
+            },
+            "post": {
+                "summary": "Crear un nuevo producto y guardarlo en la base de datos",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/definitions/Producto"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Se creo el producto correctamente"
+                    },
+                    "400": {
+                        "description": "No se creo el producto correctamente"
+                    },
+                    "500": {
+                        "description": "Error en el servidor"
+                    }
+                }
+            }
+        },
+        "api/productos/{id}": {
+            "get": {
+                "summary": "Obtener un producto por su id",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "description": "Id del producto",
+                        "type": "string",
+                        "example": "64c7c5d24d8675370743c7ae"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Se obtuvo el producto correctamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/definitions/Producto"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "No se encontro el producto"
+                    },
+                    "500": {
+                        "description": "Error en el servidor"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Editar un producto existente",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "description": "Id del producto",
+                        "type": "string",
+                        "example": "64c7c5d24d8675370743c7ae"
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/definitions/Producto"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Se edito el producto correctamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/definitions/Producto"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "No se encontro el producto"
+                    },
+                    "500": {
+                        "description": "Error en el servidor"
+                    }
+                }
+            },
+            "patch": {
+                "summary": "Actualizar un producto parcialmente un producto por su id",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "description": "Id del producto",
+                        "type": "string",
+                        "example": "64c7c5d24d8675370743c7ae"
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/definitions/Producto"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Se actualizo el producto correctamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/definitions/Producto"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "No se encontro el producto"
+                    },
+                    "500": {
+                        "description": "Error en el servidor"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Eliminar un producto por su id",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "description": "Id del producto",
+                        "type": "string",
+                        "example": "64c7c5d24d8675370743c7ae"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Se elimino el producto correctamente"
+                    },
+                    "404": {
+                        "description": "No se encontro el producto"
+                    },
+                    "500": {
+                        "description": "Error en el servidor"
+                    }
+                }
             }
         }
+    },
+    "definitions": {
+        "Producto": {
+            "type": "object",
+            "properties": {
+                "title": {
+                    "type": "string",
+                    "description": "Nombre del producto",
+                    "example": "Camiseta"
+                },
+                "price": {
+                    "type": "number",
+                    "description": "Precio del producto",
+                    "example": 25000
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Descripcion del producto",
+                    "example": "Camiseta de futbol"
+                },
+                "category": {
+                    "type": "string",
+                    "description": "Categoria del producto",
+                    "example": "zapatillas"
+                },
+                "image": {
+                    "type": "string",
+                    "description": "Imagen del producto",
+                    "example": "https://falabella.scene7.com/is/image/Falabella/16717588_1?wid=1500&hei=1500&qlt=70"
+                }
+            },
+            "required": [
+                "title",
+                "price",
+                "description",
+                "category",
+                "image"
+            ]
+        }
     }
-
-
 }
