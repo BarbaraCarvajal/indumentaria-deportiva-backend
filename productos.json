@@ -1,0 +1,262 @@
+[{
+  "_id": {
+    "$oid": "64cac58e4d8675370743c7c6"
+  },
+  "title": "Puma Nrgy comet",
+  "price": 29.99,
+  "description": "Una excelente zapatilla para deportes",
+  "category": "zapatillas",
+  "image": "https://i.postimg.cc/HnThH3HT/13772318-1.jpg"
+},{
+  "_id": {
+    "$oid": "64cac58e4d8675370743c7c7"
+  },
+  "title": "Surge 3 Zapatilla urbana",
+  "price": 54.99,
+  "description": "Una increíble zapatilla para running",
+  "category": "zapatillas",
+  "image": "https://falabella.scene7.com/is/image/Falabella/50116401_1?wid=1500&hei=1500&qlt=70"
+},{
+  "_id": {
+    "$oid": "64cac58e4d8675370743c7c8"
+  },
+  "title": "Phase Rn 2",
+  "price": 39.99,
+  "description": "Una cómoda zapatilla para entrenamiento",
+  "category": "zapatillas",
+  "image": "https://falabella.scene7.com/is/image/Falabella/50116375_1?wid=1500&hei=1500&qlt=70"
+},{
+  "_id": {
+    "$oid": "64cac58e4d8675370743c7c9"
+  },
+  "title": "Under armor running",
+  "price": 46.99,
+  "description": "Una zapatilla de alta gama para atletismo",
+  "category": "zapatillas",
+  "image": "https://falabella.scene7.com/is/image/Falabella/50043543_1?wid=1500&hei=1500&qlt=70"
+},{
+  "_id": {
+    "$oid": "64cac58e4d8675370743c7ca"
+  },
+  "title": "Zapatilla Running",
+  "price": 69.99,
+  "description": "Una zapatilla ligera y transpirable",
+  "category": "zapatillas",
+  "image": "https://falabella.scene7.com/is/image/Falabella/50199099_1?wid=1500&hei=1500&qlt=70"
+},{
+  "_id": {
+    "$oid": "64cac58e4d8675370743c7cb"
+  },
+  "title": "Nike short",
+  "price": 25.99,
+  "description": "Un cómodo short para entrenamiento",
+  "category": "shorts",
+  "image": "https://falabella.scene7.com/is/image/Falabella/116379796_1?wid=1500&hei=1500&qlt=70"
+},{
+  "_id": {
+    "$oid": "64cac58e4d8675370743c7cc"
+  },
+  "title": "Adidas short rosa",
+  "price": 23.99,
+  "description": "Un short de secado rápido para natación",
+  "category": "shorts",
+  "image": "https://falabella.scene7.com/is/image/Falabella/16682776_1?wid=1500&hei=1500&qlt=70"
+},{
+  "_id": {
+    "$oid": "64cac58e4d8675370743c7cd"
+  },
+  "title": "Roxy new impossible Love",
+  "price": 20,
+  "description": "Un short de ligero para running",
+  "category": "shorts",
+  "image": "https://falabella.scene7.com/is/image/Falabella/113972351_1?wid=1500&hei=1500&qlt=70"
+},{
+  "_id": {
+    "$oid": "64cac58e4d8675370743c7ce"
+  },
+  "title": "Adidas Shorts Deportivo",
+  "price": 15.99,
+  "description": "Un short resistente al agua para deportes acuáticos",
+  "category": "shorts",
+  "image": "https://falabella.scene7.com/is/image/Falabella/16682408_4?wid=1500&hei=1500&qlt=70"
+},{
+  "_id": {
+    "$oid": "64cac58e4d8675370743c7cf"
+  },
+  "title": "Under Armour training",
+  "price": 19.99,
+  "description": "Un short con bolsillos laterales",
+  "category": "shorts",
+  "image": "https://falabella.scene7.com/is/image/Falabella/16411609_1?wid=1500&hei=1500&qlt=70"
+},{
+  "_id": {
+    "$oid": "64cac58e4d8675370743c7d0"
+  },
+  "title": "Adidas x Marimekko",
+  "price": 12.99,
+  "description": "Una calza elástica y cómoda",
+  "category": "calzas",
+  "image": "https://falabella.scene7.com/is/image/Falabella/16682564_1?wid=1500&hei=1500&qlt=70"
+},{
+  "_id": {
+    "$oid": "64cac58e4d8675370743c7d1"
+  },
+  "title": "Diadora Animal Print",
+  "price": 12.99,
+  "description": "Una calza de compresión para entrenamiento",
+  "category": "calzas",
+  "image": "https://falabella.scene7.com/is/image/Falabella/gsc_116337566_1449951_1?wid=1500&hei=1500&qlt=70"
+},{
+  "_id": {
+    "$oid": "64cac58e4d8675370743c7d2"
+  },
+  "title": "Ellese Solange Azul",
+  "price": 13.19,
+  "description": "Una calza de yoga con diseño estampado",
+  "category": "calzas",
+  "image": "https://falabella.scene7.com/is/image/Falabella/gsc_116658865_1577522_1?wid=1500&hei=1500&qlt=70"
+},{
+  "_id": {
+    "$oid": "64cac58e4d8675370743c7d3"
+  },
+  "title": "Adidas Training",
+  "price": 6.99,
+  "description": "Una calza transpirable para deportes aeróbicos",
+  "category": "calzas",
+  "image": "https://falabella.scene7.com/is/image/Falabella/16373365_1?wid=1500&hei=1500&qlt=70"
+},{
+  "_id": {
+    "$oid": "64cac58e4d8675370743c7d4"
+  },
+  "title": "Boradora Rosa",
+  "price": 21.99,
+  "description": "Una calza larga para clima frío",
+  "category": "calzas",
+  "image": "https://falabella.scene7.com/is/image/Falabella/gsc_116337594_1449967_1?wid=1500&hei=1500&qlt=70"
+},{
+  "_id": {
+    "$oid": "64cac58e4d8675370743c7d5"
+  },
+  "title": "Ellesse Nicola",
+  "price": 9.99,
+  "description": "Una polera ligera para el verano",
+  "category": "poleras",
+  "image": "https://falabella.scene7.com/is/image/Falabella/114096932_1?wid=1500&hei=1500&qlt=70"
+},{
+  "_id": {
+    "$oid": "64cac58e4d8675370743c7d6"
+  },
+  "title": "Dry Fit Aqua ",
+  "price": 9.99,
+  "description": "Una polera de manga larga para protección UV",
+  "category": "poleras",
+  "image": "https://falabella.scene7.com/is/image/Falabella/gsc_114004209_847152_1?wid=1500&hei=1500&qlt=70"
+},{
+  "_id": {
+    "$oid": "64cac58e4d8675370743c7d7"
+  },
+  "title": "Polera Rosa",
+  "price": 13.79,
+  "description": "Una polera transpirable para entrenamiento intenso",
+  "category": "poleras",
+  "image": "https://falabella.scene7.com/is/image/Falabella/gsc_115652891_1207880_1?wid=1500&hei=1500&qlt=70"
+},{
+  "_id": {
+    "$oid": "64cac58e4d8675370743c7d8"
+  },
+  "title": "Adidas Poleron Deportivo Hoodie",
+  "price": 30.99,
+  "description": "Una chaqueta deportiva negra y cómoda",
+  "category": "chaquetas",
+  "image": "https://falabella.scene7.com/is/image/Falabella/16811045_1?wid=1500&hei=1500&qlt=70"
+},{
+  "_id": {
+    "$oid": "64cac58e4d8675370743c7d9"
+  },
+  "title": "Chaqueta con capucha Puma",
+  "price": 49.99,
+  "description": "Una chaqueta con capucha para actividades al aire libre",
+  "category": "chaquetas",
+  "image": "https://falabella.scene7.com/is/image/Falabella/16717588_1?wid=1500&hei=1500&qlt=70"
+},{
+  "_id": {
+    "$oid": "64cac58e4d8675370743c7da"
+  },
+  "title": "Polerón Lenga",
+  "price": 26.99,
+  "description": "Una chaqueta comoda",
+  "category": "chaquetas",
+  "image": "https://falabella.scene7.com/is/image/Falabella/gsc_118347982_3414130_1?wid=1500&hei=1500&qlt=70"
+},{
+  "_id": {
+    "$oid": "64cac58e4d8675370743c7db"
+  },
+  "title": "Polerón Puma celeste",
+  "price": 22.99,
+  "description": "Una chaqueta impermeable para actividades acuáticas",
+  "category": "chaquetas",
+  "image": "https://falabella.scene7.com/is/image/Falabella/16773077_1?wid=1500&hei=1500&qlt=70"
+},{
+  "_id": {
+    "$oid": "64cac58e4d8675370743c7dc"
+  },
+  "title": "Gorra deportiva Nike",
+  "price": 7.99,
+  "description": "Una gorra deportiva para proteger del sol",
+  "category": "otros",
+  "image": "https://falabella.scene7.com/is/image/Falabella/gsc_116376467_1469300_1?wid=1500&hei=1500&qlt=70"
+},{
+  "_id": {
+    "$oid": "64cac58e4d8675370743c7dd"
+  },
+  "title": "Guantes para entrenamiento",
+  "price": 35.99,
+  "description": "Guantes para proteger las manos durante el entrenamiento",
+  "category": "otros",
+  "image": "https://falabella.scene7.com/is/image/Falabella/gsc_113598186_690458_1?wid=1500&hei=1500&qlt=70"
+},{
+  "_id": {
+    "$oid": "64cac58e4d8675370743c7de"
+  },
+  "title": "Toalla De Microfibra De Secado Rápido Rosado",
+  "price": 29.99,
+  "description": "Toalla absorbente para usar en el gimnasio",
+  "category": "otros",
+  "image": "https://falabella.scene7.com/is/image/Falabella/gsc_114492180_1027791_1?wid=1500&hei=1500&qlt=70"
+},{
+  "_id": {
+    "$oid": "64cac58e4d8675370743c7df"
+  },
+  "title": "Balón de fútbol",
+  "price": 21.99,
+  "description": "Balón de fútbol de alta calidad",
+  "category": "otros",
+  "image": "https://falabella.scene7.com/is/image/Falabella/gsc_116384055_1473563_1?wid=1500&hei=1500&qlt=70"
+},{
+  "_id": {
+    "$oid": "64cac58e4d8675370743c7e0"
+  },
+  "title": "Banda elástica de resistencia",
+  "price": 9.99,
+  "description": "Banda elástica para ejercicios de resistencia",
+  "category": "otros",
+  "image": "https://falabella.scene7.com/is/image/Falabella/gsc_112858274_441872_1?wid=800&hei=800&qlt=70"
+},{
+  "_id": {
+    "$oid": "64cac58e4d8675370743c7e1"
+  },
+  "title": "Mochila deportiva negra",
+  "price": 26.99,
+  "description": "Mochila deportiva negra con compartimentos",
+  "category": "mochilas",
+  "image": "https://falabella.scene7.com/is/image/Falabella/16661877_1?wid=1500&hei=1500&qlt=70"
+},{
+  "_id": {
+    "$oid": "64cac58e4d8675370743c7e2"
+  },
+  "title": "Mochila de hidratación",
+  "price": 23.99,
+  "description": "Mochila con bolsa de hidratación para actividades al aire libre",
+  "category": "mochilas",
+  "image": "https://falabella.scene7.com/is/image/Falabella/gsc_115411471_1100755_1?wid=1500&hei=1500&qlt=70"
+}]
