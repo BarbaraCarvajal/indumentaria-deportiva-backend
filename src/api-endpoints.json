@@ -17,7 +17,7 @@
                                 "schema": {
                                     "type": "array",
                                     "items": {
-                                        "$ref": "#/definitions/Producto"
+                                        "$ref": "#/components/schemas/Producto"
                                     }
                                 }
                             }
@@ -30,7 +30,7 @@
                         "description": "Error en el servidor"
                     },
                     "404": {
-                        "description": "No se encontro el producto"
+                        "description": "No se encontró el producto"
                     }
                 }
             },
@@ -41,17 +41,17 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/definitions/Producto"
+                                "$ref": "#/components/schemas/Producto"
                             }
                         }
                     }
                 },
                 "responses": {
                     "201": {
-                        "description": "Se creo el producto correctamente"
+                        "description": "Se creó el producto correctamente"
                     },
                     "400": {
-                        "description": "No se creo el producto correctamente"
+                        "description": "No se creó el producto correctamente"
                     },
                     "500": {
                         "description": "Error en el servidor"
@@ -59,7 +59,7 @@
                 }
             }
         },
-        "api/productos/{id}": {
+        "/api/productos/{id}": {
             "get": {
                 "summary": "Obtener un producto por su id",
                 "parameters": [
@@ -68,8 +68,10 @@
                         "in": "path",
                         "required": true,
                         "description": "Id del producto",
-                        "type": "string",
-                        "example": "64c7c5d24d8675370743c7ae"
+                        "schema": {
+                            "type": "string",
+                            "example": "64c7c5d24d8675370743c7ae"
+                        }
                     }
                 ],
                 "responses": {
@@ -78,13 +80,13 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/definitions/Producto"
+                                    "$ref": "#/components/schemas/Producto"
                                 }
                             }
                         }
                     },
                     "404": {
-                        "description": "No se encontro el producto"
+                        "description": "No se encontró el producto"
                     },
                     "500": {
                         "description": "Error en el servidor"
@@ -99,8 +101,10 @@
                         "in": "path",
                         "required": true,
                         "description": "Id del producto",
-                        "type": "string",
-                        "example": "64c7c5d24d8675370743c7ae"
+                        "schema": {
+                            "type": "string",
+                            "example": "64c7c5d24d8675370743c7ae"
+                        }
                     }
                 ],
                 "requestBody": {
@@ -108,24 +112,24 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/definitions/Producto"
+                                "$ref": "#/components/schemas/Producto"
                             }
                         }
                     }
                 },
                 "responses": {
                     "200": {
-                        "description": "Se edito el producto correctamente",
+                        "description": "Se editó el producto correctamente",
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/definitions/Producto"
+                                    "$ref": "#/components/schemas/Producto"
                                 }
                             }
                         }
                     },
                     "404": {
-                        "description": "No se encontro el producto"
+                        "description": "No se encontró el producto"
                     },
                     "500": {
                         "description": "Error en el servidor"
@@ -140,8 +144,10 @@
                         "in": "path",
                         "required": true,
                         "description": "Id del producto",
-                        "type": "string",
-                        "example": "64c7c5d24d8675370743c7ae"
+                        "schema": {
+                            "type": "string",
+                            "example": "64c7c5d24d8675370743c7ae"
+                        }
                     }
                 ],
                 "requestBody": {
@@ -149,24 +155,24 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/definitions/Producto"
+                                "$ref": "#/components/schemas/Producto"
                             }
                         }
                     }
                 },
                 "responses": {
                     "200": {
-                        "description": "Se actualizo el producto correctamente",
+                        "description": "Se actualizó el producto correctamente",
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/definitions/Producto"
+                                    "$ref": "#/components/schemas/Producto"
                                 }
                             }
                         }
                     },
                     "404": {
-                        "description": "No se encontro el producto"
+                        "description": "No se encontró el producto"
                     },
                     "500": {
                         "description": "Error en el servidor"
@@ -181,16 +187,215 @@
                         "in": "path",
                         "required": true,
                         "description": "Id del producto",
-                        "type": "string",
-                        "example": "64c7c5d24d8675370743c7ae"
+                        "schema": {
+                            "type": "string",
+                            "example": "64c7c5d24d8675370743c7ae"
+                        }
                     }
                 ],
                 "responses": {
                     "200": {
-                        "description": "Se elimino el producto correctamente"
+                        "description": "Se eliminó el producto correctamente"
                     },
                     "404": {
-                        "description": "No se encontro el producto"
+                        "description": "No se encontró el producto"
+                    },
+                    "500": {
+                        "description": "Error en el servidor"
+                    }
+                }
+            }
+        },
+        "/api/usuarios": {
+            "post": {
+                "summary": "Crear un nuevo usuario",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Usuario"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Usuario creado correctamente"
+                    },
+                    "400": {
+                        "description": "Error al crear el usuario"
+                    },
+                    "500": {
+                        "description": "Error en el servidor"
+                    }
+                }
+            },
+            "get": {
+                "summary": "Listar todos los usuarios",
+                "responses": {
+                    "200": {
+                        "description": "Usuarios listados correctamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Usuario"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Usuarios no encontrados"
+                    },
+                    "500": {
+                        "description": "Error en el servidor"
+                    }
+                }
+            }
+        },
+        "/api/usuarios/{id}": {
+            "get": {
+                "summary": "Obtener un usuario por ID",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "description": "ID del usuario",
+                        "schema": {
+                            "type": "string",
+                            "example": "64c7c5d24d8675370743c7ae"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Usuario obtenido correctamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Usuario"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Usuario no encontrado"
+                    },
+                    "500": {
+                        "description": "Error en el servidor"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Actualizar un usuario por ID",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "description": "ID del usuario",
+                        "schema": {
+                            "type": "string",
+                            "example": "64c7c5d24d8675370743c7ae"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Usuario"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Usuario actualizado correctamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Usuario"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Usuario no encontrado"
+                    },
+                    "500": {
+                        "description": "Error en el servidor"
+                    }
+                }
+            },
+            "patch": {
+                "summary": "Actualizar parcialmente un usuario por ID",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "description": "ID del usuario",
+                        "schema": {
+                            "type": "string",
+                            "example": "64c7c5d24d8675370743c7ae"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Usuario"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Usuario actualizado parcialmente correctamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Usuario"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Usuario no encontrado"
+                    },
+                    "500": {
+                        "description": "Error en el servidor"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Eliminar un usuario por ID",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "description": "ID del usuario",
+                        "schema": {
+                            "type": "string",
+                            "example": "64c7c5d24d8675370743c7ae"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Usuario eliminado correctamente"
+                    },
+                    "404": {
+                        "description": "Usuario no encontrado"
                     },
                     "500": {
                         "description": "Error en el servidor"
@@ -199,43 +404,81 @@
             }
         }
     },
-    "definitions": {
-        "Producto": {
-            "type": "object",
-            "properties": {
-                "title": {
-                    "type": "string",
-                    "description": "Nombre del producto",
-                    "example": "Camiseta"
+    "components": {
+        "schemas": {
+            "Producto": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": "string",
+                        "description": "Nombre del producto",
+                        "example": "Camiseta"
+                    },
+                    "price": {
+                        "type": "number",
+                        "description": "Precio del producto",
+                        "example": 25000
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "Descripcion del producto",
+                        "example": "Camiseta de futbol"
+                    },
+                    "category": {
+                        "type": "string",
+                        "description": "Categoria del producto",
+                        "example": "zapatillas"
+                    },
+                    "image": {
+                        "type": "string",
+                        "description": "Imagen del producto",
+                        "example": "https://falabella.scene7.com/is/image/Falabella/16717588_1?wid=1500&hei=1500&qlt=70"
+                    }
                 },
-                "price": {
-                    "type": "number",
-                    "description": "Precio del producto",
-                    "example": 25000
-                },
-                "description": {
-                    "type": "string",
-                    "description": "Descripcion del producto",
-                    "example": "Camiseta de futbol"
-                },
-                "category": {
-                    "type": "string",
-                    "description": "Categoria del producto",
-                    "example": "zapatillas"
-                },
-                "image": {
-                    "type": "string",
-                    "description": "Imagen del producto",
-                    "example": "https://falabella.scene7.com/is/image/Falabella/16717588_1?wid=1500&hei=1500&qlt=70"
-                }
+                "required": [
+                    "title",
+                    "price",
+                    "description",
+                    "category",
+                    "image"
+                ]
             },
-            "required": [
-                "title",
-                "price",
-                "description",
-                "category",
-                "image"
-            ]
+            "Usuario": {
+                "type": "object",
+                "properties": {
+                    "nombre": {
+                        "type": "string",
+                        "description": "Nombre del usuario",
+                        "example": "Juan"
+                    },
+                    "apellido": {
+                        "type": "string",
+                        "description": "Apellido del usuario",
+                        "example": "Perez"
+                    },
+                    "email": {
+                        "type": "string",
+                        "description": "Correo electrónico del usuario",
+                        "example": "juan@example.com"
+                    },
+                    "password": {
+                        "type": "string",
+                        "description": "Contraseña cifrada del usuario"
+                    },
+                    "rol": {
+                        "type": "string",
+                        "description": "Rol del usuario",
+                        "example": "admin"
+                    }
+                },
+                "required": [
+                    "nombre",
+                    "apellido",
+                    "email",
+                    "password",
+                    "rol"
+                ]
+            }
         }
     }
 }
