@@ -1,0 +1,20 @@
+[{
+  "_id": {
+    "$oid": "64cd8ae3e2ee65f56705f4fa"
+  },
+  "nombre": "userTest",
+  "apellido": "test",
+  "email": "user@mail.com",
+  "password": "$2b$10$RYDNSH4jJjLSIwmcGVVkouyN5gHiFzZJmg80as92J4mZF56zNb/am",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64cd8b0de2ee65f56705f4ff"
+  },
+  "nombre": "ADMIN",
+  "apellido": "test",
+  "email": "admin@mail.com",
+  "password": "$2b$10$hw6Yfo4yOJcvNOWh5HtlYOe36y/2xQNOzRH6mE4WN3EDZLnCw6HFm",
+  "rol": "admin",
+  "__v": 0
+}]
