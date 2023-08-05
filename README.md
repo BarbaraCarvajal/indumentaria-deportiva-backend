@@ -51,6 +51,12 @@ Este proyecto fue realizado de forma grupal.
 
 1. Tener previamente instalado Node, clonar [este repositorio](https://github.com/BarbaraCarvajal/indumentaria-deportiva-backend)
 2. En la terminal del proyecto correr el código npm run dev (si llegase a surgir un error, usar el comando npm i o npm install)
+
+```
+npm install
+npm run dev
+```
+
 3. En Mongo Compass crear una base de datos en el servidor localhost llamado: " indumentaria_deportiva"
 4. Luego agregar las dos colecciones [productos.json](https://github.com/BarbaraCarvajal/indumentaria-deportiva-backend/blob/master/productos.json) y [clientes.json](https://github.com/BarbaraCarvajal/indumentaria-deportiva-backend/blob/master/usuarios.json)
 5. Seguir los pasos de [Indumentaria Front](https://github.com/vnssmorales/Tienda_Indumentaria_deportiva_Front)
