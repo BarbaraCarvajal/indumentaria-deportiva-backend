@@ -12,7 +12,7 @@
     "$oid": "64cac58e4d8675370743c7cb"
   },
   "title": "Nike short",
-  "price": 65000,
+  "price": 64990,
   "description": "Un cómodo short para entrenamiento",
   "category": "shorts",
   "image": "https://falabella.scene7.com/is/image/Falabella/116379796_1?wid=1500&hei=1500&qlt=70"
@@ -223,4 +223,44 @@
   "description": "Mochila con bolsa de hidratación para actividades al aire libre",
   "category": "mochilas",
   "image": "https://falabella.scene7.com/is/image/Falabella/gsc_115411471_1100755_1?wid=1500&hei=1500&qlt=70"
+},{
+  "_id": {
+    "$oid": "64cd84c4e2ee65f56705f4a5"
+  },
+  "title": "Terrex Voyager 21 Travel Zapatilla Outdoor",
+  "price": 42990,
+  "description": "Comodas para el trekking",
+  "category": "zapatillas",
+  "image": "https://falabella.scene7.com/is/image/Falabella/50207709_1?wid=1500&hei=1500&qlt=70",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64cd856fe2ee65f56705f4bd"
+  },
+  "title": "Skechers Zapatilla urbana niña",
+  "price": 37990,
+  "description": "Comoda zapatilla para la regalona de la casa",
+  "category": "zapatillas",
+  "image": "https://falabella.scene7.com/is/image/Falabella/50211612_1?wid=1500&hei=1500&qlt=70",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64cd85b2e2ee65f56705f4bf"
+  },
+  "title": "Vulcano Iron Stone Grape Lippi",
+  "price": 52990,
+  "description": "Ideal para un entrenamiento intenso",
+  "category": "zapatillas",
+  "image": "https://falabella.scene7.com/is/image/Falabella/50211612_1?wid=1500&hei=1500&qlt=70",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64cd85e7e2ee65f56705f4c1"
+  },
+  "title": "Terrex Eastrail 2.0 Zapatilla Outdoor",
+  "price": 79990,
+  "description": "Unas zapatillas a todo terreno",
+  "category": "zapatillas",
+  "image": "https://falabella.scene7.com/is/image/Falabella/50207689_1?wid=1500&hei=1500&qlt=70",
+  "__v": 0
 }]
